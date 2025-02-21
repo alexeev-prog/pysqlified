@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.9"
 dependencies = [
+    "ansiwrap>=0.8.4",
     "asyncio>=3.4.3",
     "requests>=2.32.3",
     "rich>=13.9.4",
