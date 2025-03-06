@@ -27,22 +27,6 @@ def log(label: str,
 	status: Optional[str] = "success",
 	comment: Optional[str] = None,
 ) -> None:
-	"""
-	Prints a test result.
-	
-	:param      percent:      The percent
-	:type       percent:      str
-	:param      label:        The label
-	:type       label:        str
-	:param      status:       The status
-	:type       status:       str
-	:param      output:       The output
-	:type       output:       Any
-	:param      message_type:  The message_type
-	:type       message_type:  str
-	:param      comment:      The comment
-	:type       comment:      str
-	"""
 	date = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
 	width = shutil.get_terminal_size().columns - 5 - len(date)
 
@@ -66,7 +50,6 @@ def log(label: str,
 		console.print(
 			f"[black bold on blue]NOTE[/black bold on blue] {label.ljust(width)}[dim]{date}[/dim]"
 		)
-
 
 
 def print_sql_query(sql_query: str, comment: Optional[str] = 'SQL Query', theme: str = 'monokai') -> None:
